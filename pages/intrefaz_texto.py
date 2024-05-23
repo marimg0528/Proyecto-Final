@@ -37,10 +37,9 @@ st.title("Control de Bombillo")
 st.write("Escribe algo en el siguiente cuadro y presiona el botón para encender la luz.")
 
 input_texto = st.text_input("Escribe aquí:")
-boton_encender = st.button("Encender Bombilla")
+boton_encender = st.button("Encender/Apagar")
 
 if (input_texto=="hola"):
     client1.publish("MAR","{'led': 'Enciende'}",qos=0, retain=False)
-    st.write ("hola")
 if (input_texto=="adios"):
     client1.publish("MAR","{'led': 'Apaga'}",qos=0, retain=False)
