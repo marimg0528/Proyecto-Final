@@ -36,6 +36,12 @@ page_bg_img = '''
 [data-testid="stMarkdownContainer"] * {
     color: black;
 }
+/* Cambio color botón */
+button
+ {
+    color: white !important;
+    background-color: #C37026 !important; */
+}
 </style>
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
