@@ -45,7 +45,7 @@ page_bg_img = '''
 /* Cambiar el color del botón a blanco */
 button {
     color: white !important;
-    background-color: #1f68b2 !important; /*
+    background-color: #ffffff !important; /*
 }
 </style>
 '''
