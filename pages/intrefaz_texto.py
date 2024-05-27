@@ -63,5 +63,7 @@ boton_encender = st.button("Encender/Apagar")
 
 if input_texto == "hola":
     client1.publish("MAR", "{'led': 'Enciende'}", qos=0, retain=False)
+    st.write("La bombilla se ha encendido")
 if input_texto == "adios":
     client1.publish("MAR", "{'led': 'Apaga'}", qos=0, retain=False)
+    st.write("La bombilla se ha apagado")
