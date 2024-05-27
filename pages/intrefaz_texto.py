@@ -42,13 +42,18 @@ page_bg_img = '''
 [data-testid="stMarkdownContainer"] * {
     color: black;
 }
+/* Cambiar el color del botón a blanco */
+button {
+    color: white !important;
+    background-color: #1f68b2 !important; /*
+}
 </style>
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Control de Bombillo")
 
-# Insertar imagen debajo del título
+
 st.image("bombilla.jpg", caption="Bombilla")
 
 st.write("Escribe algo en el siguiente cuadro y presiona el botón para encender la luz.")
