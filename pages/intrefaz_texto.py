@@ -47,6 +47,10 @@ page_bg_img = '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Control de Bombillo")
+
+# Insertar imagen debajo del título
+st.image("bombilla.jpg", caption="Bombilla")
+
 st.write("Escribe algo en el siguiente cuadro y presiona el botón para encender la luz.")
 
 input_texto = st.text_input("Escribe aquí:")
