@@ -42,7 +42,7 @@ page_bg_img = '''
 [data-testid="stMarkdownContainer"] * {
     color: black;
 }
-/* Cambiar el color del botón a blanco */
+/* Cambio color botón */
 button
  {
     color: white !important;
