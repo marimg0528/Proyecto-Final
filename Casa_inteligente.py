@@ -30,7 +30,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 # Configurar el color de fondo
 page_bg_img = '''
 <style>
-body {
+[data-testid="stAppViewContainer"] {
     background-color: #add8e6;
 }
 </style>
