@@ -42,7 +42,7 @@ page_bg_img = '''
 [data-testid="stMarkdownContainer"] * {
     color: black;
 }
-button {
+button.css-1l5j0d8.e1ewe7hr3 {
     color: white !important;
 }
 </style>
