@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image as Image, ImageOps as ImagOps
 from keras.models import load_model
 
-def on_publish(client, userdata, result):  # create function for callback
+def on_publish(client, userdata, result): 
     print("el dato ha sido publicado \n")
     pass
 
@@ -27,11 +27,17 @@ client1.connect(broker, port)
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-# Configurar el color de fondo
 page_bg_img = '''
 <style>
 [data-testid="stAppViewContainer"] {
     background-color: #F6FADC;
+    color: black;
+}
+[data-testid="stHeader"] {
+    color: black;
+}
+[data-testid="stSidebar"] {
+    color: black;
 }
 </style>
 '''
