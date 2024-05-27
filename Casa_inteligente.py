@@ -31,7 +31,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 page_bg_img = '''
 <style>
 [data-testid="stAppViewContainer"] {
-    background-color: #FFEBC7;
+    background-color: #F6FADC;
 }
 </style>
 '''
