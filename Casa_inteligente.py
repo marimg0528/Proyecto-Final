@@ -42,7 +42,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Cerradura Inteligente")
 
-img_file_buffer = st.camera_input("Toma una Foto")
+img_file_buffer = st.camera_input("Para abrir la cerradura toma una foto de tu cara para poder ejecutar el reconocimiento facial")
 
 if img_file_buffer is not None:
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
