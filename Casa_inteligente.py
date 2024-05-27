@@ -7,7 +7,7 @@ import numpy as np
 from PIL import Image as Image, ImageOps as ImagOps
 from keras.models import load_model
 
-def on_publish(client, userdata, result):
+def on_publish(client, userdata, result):  # create function for callback
     print("el dato ha sido publicado \n")
     pass
 
@@ -31,13 +31,26 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 page_bg_img = '''
 <style>
 body {
-    background-color: #EBD7B3;
+    background-color: #add8e6;
 }
 </style>
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Cerradura Inteligente")
+
+img_file_buffer = st.camera_input("Toma una Foto")
+
+if img_file_buffer is not None:
+    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+    img = Image.open(img_file_buffer)
+
+    newsize = (224, 224)
+    img = img.resize(newsize)
+    img_array = np.array(img)
+
+    normalized_image_array = (img_array.astype(np.float32) / 127.0) - 1
+    data[0] = normalized_image_array
 
     prediction = model.predict(data)
     print(prediction)
