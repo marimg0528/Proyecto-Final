@@ -33,13 +33,26 @@ def encender_bombilla():
     except requests.exceptions.RequestException as e:
         st.error(f"Error de conexión: {e}")
 
+
+page_bg_img = '''
+<style>
+[data-testid="stAppViewContainer"] {
+    background-color: #F6FADC;
+}
+[data-testid="stMarkdownContainer"] * {
+    color: black;
+}
+</style>
+'''
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 st.title("Control de Bombillo")
 st.write("Escribe algo en el siguiente cuadro y presiona el botón para encender la luz.")
 
 input_texto = st.text_input("Escribe aquí:")
 boton_encender = st.button("Encender/Apagar")
 
-if (input_texto=="hola"):
-    client1.publish("MAR","{'led': 'Enciende'}",qos=0, retain=False)
-if (input_texto=="adios"):
-    client1.publish("MAR","{'led': 'Apaga'}",qos=0, retain=False)
+if input_texto == "hola":
+    client1.publish("MAR", "{'led': 'Enciende'}", qos=0, retain=False)
+if input_texto == "adios":
+    client1.publish("MAR", "{'led': 'Apaga'}", qos=0, retain=False)
