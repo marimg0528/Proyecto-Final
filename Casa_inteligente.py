@@ -27,16 +27,13 @@ client1.connect(broker, port)
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
+
 page_bg_img = '''
 <style>
 [data-testid="stAppViewContainer"] {
     background-color: #F6FADC;
-    color: black;
 }
-[data-testid="stHeader"] {
-    color: black;
-}
-[data-testid="stSidebar"] {
+[data-testid="stMarkdownContainer"] * {
     color: black;
 }
 </style>
